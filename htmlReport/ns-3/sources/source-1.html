@@ -1,0 +1,186 @@
+
+
+
+<!DOCTYPE html>
+<html id="htmlId">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"> 
+  <title>Coverage Report > Contact</title>
+  <style type="text/css">
+    @import "../../css/coverage.css";
+    @import "../../css/idea.min.css";
+  </style>
+  <script type="text/javascript" src="../../js/highlight.min.js"></script>
+  <script type="text/javascript" src="../../js/highlightjs-line-numbers.min.js"></script>
+</head>
+
+<body>
+<div class="content">
+<div class="breadCrumbs">
+Current scope:     <a href="../../index.html">all classes</a>
+    <span class="separator">|</span>
+    <a href="../index.html">contact</a>
+</div>
+
+<h1>Coverage Summary for Class: Contact (contact)</h1>
+
+<table class="coverageStats">
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Class, %
+</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">Contact</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (1/1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (10/10)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (33/33)
+  </span>
+</td>
+</tr>
+
+</table>
+
+<br/>
+<br/>
+
+
+<pre>
+<code class="sourceCode" id="sourceCode">&nbsp;package contact;
+&nbsp;
+&nbsp;public class Contact {
+&nbsp;
+&nbsp;    private static final int maxLength = 10; // Maximum length of the strings.
+&nbsp;    private String firstName;
+&nbsp;    private String lastName;
+&nbsp;    private String phone;
+&nbsp;    private String address;
+&nbsp;    private final String contactID;
+&nbsp;
+&nbsp;    // Constructor method.
+<b class="fc">&nbsp;    public Contact(String contactID, String firstName, String lastName, String phone, String address) {</b>
+<b class="fc">&nbsp;        if (contactID == null || contactID.length() &gt; maxLength) {</b>
+<b class="fc">&nbsp;            throw new IllegalArgumentException(&quot;Invalid contact ID.&quot;);</b>
+&nbsp;        }
+<b class="fc">&nbsp;        if (firstName == null || firstName.length() &gt; maxLength) {</b>
+<b class="fc">&nbsp;            throw new IllegalArgumentException(&quot;Invalid first name.&quot;);</b>
+&nbsp;        }
+<b class="fc">&nbsp;        if (lastName == null || lastName.length() &gt; maxLength) {</b>
+<b class="fc">&nbsp;            throw new IllegalArgumentException(&quot;Invalid last name.&quot;);</b>
+&nbsp;        }
+<b class="fc">&nbsp;        if (phone == null || phone.length() &gt; maxLength) {</b>
+<b class="fc">&nbsp;            throw new IllegalArgumentException(&quot;Invalid phone number.&quot;);</b>
+&nbsp;        }
+<b class="fc">&nbsp;        if (address == null || address.length() &gt; 30) {</b>
+<b class="fc">&nbsp;            throw new IllegalArgumentException(&quot;Invalid address.&quot;);</b>
+&nbsp;        }
+&nbsp;
+<b class="fc">&nbsp;        this.firstName = firstName;</b>
+<b class="fc">&nbsp;        this.lastName = lastName;</b>
+<b class="fc">&nbsp;        this.phone = phone;</b>
+<b class="fc">&nbsp;        this.address = address;</b>
+<b class="fc">&nbsp;        this.contactID = contactID;</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    // Getter methods.
+<b class="fc">&nbsp;    public String getAddress() { return address; }</b>
+<b class="fc">&nbsp;    public String getFirstName() { return firstName; }</b>
+<b class="fc">&nbsp;    public String getLastName() { return lastName; }</b>
+<b class="fc">&nbsp;    public String getPhone() { return phone; }</b>
+<b class="fc">&nbsp;    public String getContactID() { return contactID; }</b>
+&nbsp;
+&nbsp;    // Setter methods.
+&nbsp;    // No setter for contactID because it will not be changed.
+&nbsp;    public void setFirstName(String firstName) {
+<b class="fc">&nbsp;        if (firstName != null &amp;&amp; firstName.length() &lt;= maxLength) {</b>
+<b class="fc">&nbsp;            this.firstName = firstName;</b>
+&nbsp;        } else {
+<b class="fc">&nbsp;            throw new IllegalArgumentException(&quot;Error: Invalid first name.&quot;);</b>
+&nbsp;        }
+&nbsp;    }
+&nbsp;
+&nbsp;    public void setLastName(String lastName) {
+<b class="fc">&nbsp;        if (lastName != null &amp;&amp; lastName.length() &lt;= maxLength) {</b>
+<b class="fc">&nbsp;            this.lastName = lastName;</b>
+&nbsp;        } else {
+<b class="fc">&nbsp;            throw new IllegalArgumentException(&quot;Error: Invalid last name.&quot;);</b>
+&nbsp;        }
+&nbsp;    }
+&nbsp;
+&nbsp;    public void setPhone(String phone) {
+<b class="fc">&nbsp;        if (phone != null &amp;&amp; phone.length() &lt;= maxLength) {</b>
+<b class="fc">&nbsp;            this.phone = phone;</b>
+&nbsp;        } else {
+<b class="fc">&nbsp;            throw new IllegalArgumentException(&quot;Error: Invalid phone number.&quot;);</b>
+&nbsp;        }
+&nbsp;    }
+&nbsp;
+&nbsp;    public void setAddress(String address) {
+<b class="fc">&nbsp;        if (address != null &amp;&amp; address.length() &lt;= 30) {</b>
+<b class="fc">&nbsp;            this.address = address;</b>
+&nbsp;        } else {
+<b class="fc">&nbsp;            throw new IllegalArgumentException(&quot;Error: Invalid address.&quot;);</b>
+&nbsp;        }
+&nbsp;    }
+&nbsp;
+&nbsp;
+&nbsp;    // make something iterate and pass in requirements for max len and what is needed like phone numbers
+&nbsp;    // loop for input until valid input is given
+&nbsp;
+&nbsp;}
+</code>
+</pre>
+</div>
+
+<script type="text/javascript">
+(function() {
+    var msie = false, msie9 = false;
+    /*@cc_on
+      msie = true;
+      @if (@_jscript_version >= 9)
+        msie9 = true;
+      @end
+    @*/
+
+    if (!msie || msie && msie9) {
+      hljs.highlightAll()
+      hljs.initLineNumbersOnLoad();
+    }
+})();
+</script>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2023-12-09 21:59</div>
+</div>
+</body>
+</html>
