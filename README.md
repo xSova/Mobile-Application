@@ -1,7 +1,7 @@
 # Mobile Application
 
 ## Overview
-This Java project manages appointments, contacts, and tasks. It focuses on robust data management with validation and includes packages for each entity along with their test suites.
+This Java project manages appointments, contacts, and tasks (originally from [Appointment-Service](https://github.com/xSova/Appointment-Service), [Contact-Service](https://github.com/xSova/Contact-Service), and [Task-Service](https://github.com/xSova/Task-Service). It focuses on robust data management with validation and includes packages for each entity along with their test suites.
 
 ## Packages and Classes
 
